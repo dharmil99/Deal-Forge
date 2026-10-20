@@ -7,6 +7,7 @@ Mounts all v1 domain routers and provides versioned health checks.
 
 from fastapi import APIRouter, Depends
 
+from backend.app.api.v1.ai import router as ai_router
 from backend.app.api.v1.companies import router as companies_router
 from backend.app.api.v1.deals import router as deals_router
 from backend.app.api.v1.scenarios import router as scenarios_router
@@ -20,6 +21,7 @@ api_v1_router.include_router(companies_router, prefix="/companies", tags=["Compa
 api_v1_router.include_router(screening_router, prefix="/screening", tags=["Screening"])
 api_v1_router.include_router(deals_router, prefix="/deals", tags=["Deals"])
 api_v1_router.include_router(scenarios_router, prefix="/deals", tags=["Scenarios & Sensitivity"])
+api_v1_router.include_router(ai_router, prefix="/ai", tags=["AI & Research"])
 
 
 @api_v1_router.get(
