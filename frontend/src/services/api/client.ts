@@ -15,9 +15,15 @@ import type {
   HealthResponse,
   PrecedentsResponse,
   ScenarioResult,
+  ScenarioRequest,
+  ScenarioComparisonResponse,
   ScreeningRequest,
   ScreeningResponse,
   SingleScenarioRequest,
+  Sensitivity1DRequest,
+  Sensitivity1DResponse,
+  Sensitivity2DRequest,
+  Sensitivity2DResponse,
   SourcesUsesRequest,
   SourcesUsesResponse,
   AccretionDilutionRequest,
@@ -207,18 +213,18 @@ export const api = {
         method: 'POST',
         body: JSON.stringify(payload),
       }),
-    compareScenarios: (payload: unknown) =>
-      request<unknown>('/api/v1/deals/scenarios', {
+    compareScenarios: (payload: ScenarioRequest) =>
+      request<ScenarioComparisonResponse>('/api/v1/deals/scenarios', {
         method: 'POST',
         body: JSON.stringify(payload),
       }),
-    sensitivity1D: (payload: unknown) =>
-      request<unknown>('/api/v1/deals/sensitivity/1d', {
+    sensitivity1D: (payload: Sensitivity1DRequest) =>
+      request<Sensitivity1DResponse>('/api/v1/deals/sensitivity/1d', {
         method: 'POST',
         body: JSON.stringify(payload),
       }),
-    sensitivity2D: (payload: unknown) =>
-      request<unknown>('/api/v1/deals/sensitivity/2d', {
+    sensitivity2D: (payload: Sensitivity2DRequest) =>
+      request<Sensitivity2DResponse>('/api/v1/deals/sensitivity/2d', {
         method: 'POST',
         body: JSON.stringify(payload),
       }),

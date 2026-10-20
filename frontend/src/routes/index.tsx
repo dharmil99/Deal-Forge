@@ -12,6 +12,10 @@ import { ValuationSummaryPage } from '@/pages/ValuationSummaryPage';
 import { DealBuilderPage } from '@/pages/DealBuilderPage';
 import { SourcesUsesPage } from '@/pages/SourcesUsesPage';
 import { AccretionDilutionPage } from '@/pages/AccretionDilutionPage';
+import { ScenarioAnalysisPage } from '@/pages/ScenarioAnalysisPage';
+import { SensitivityAnalysisPage } from '@/pages/SensitivityAnalysisPage';
+import { DealComparisonPage } from '@/pages/DealComparisonPage';
+import { ICReportPage } from '@/pages/ICReportPage';
 import { UnderConstructionPage } from '@/pages/UnderConstructionPage';
 
 export const router = createBrowserRouter([
@@ -70,6 +74,10 @@ export const router = createBrowserRouter([
 
       /* Deal Workspace Navigation Group */
       {
+        path: '/deals',
+        element: <Navigate to="/deal-builder" replace />,
+      },
+      {
         path: '/deal-builder',
         element: <DealBuilderPage />,
       },
@@ -83,55 +91,39 @@ export const router = createBrowserRouter([
       },
       {
         path: '/scenarios',
-        element: (
-          <UnderConstructionPage
-            title="Scenario Analysis"
-            category="Deal Workspace"
-            plannedPhase="Stage 1D Scenarios Engine"
-            description="Deterministic Base, Bull, and Bear transaction stress testing across organic growth rates, margin performance, and synergy capture schedules."
-            backendEndpoint="/api/v1/deals/scenarios"
-            isDealContextSensitive={true}
-          />
-        ),
+        element: <ScenarioAnalysisPage />,
+      },
+      {
+        path: '/deal-workspace/scenarios',
+        element: <ScenarioAnalysisPage />,
       },
       {
         path: '/sensitivity',
-        element: (
-          <UnderConstructionPage
-            title="Sensitivity Analysis"
-            category="Deal Workspace"
-            plannedPhase="Stage 1D Sensitivity Engine"
-            description="Two-dimensional sensitivity matrix evaluating pro-forma EPS impact and deal feasibility across varying purchase premiums and financing interest rates."
-            backendEndpoint="/api/v1/deals/sensitivity"
-            isDealContextSensitive={true}
-          />
-        ),
+        element: <SensitivityAnalysisPage />,
+      },
+      {
+        path: '/deal-workspace/sensitivity',
+        element: <SensitivityAnalysisPage />,
       },
 
       /* Portfolio Navigation Group */
       {
+        path: '/portfolio/deal-comparison',
+        element: <DealComparisonPage />,
+      },
+      {
         path: '/deal-comparison',
-        element: (
-          <UnderConstructionPage
-            title="Deal Comparison"
-            category="Portfolio"
-            plannedPhase="Portfolio Comparison Engine"
-            description="Side-by-side comparative evaluation of multiple pipeline M&A opportunities across valuation multiples, capital requirements, and EPS accretion profiles."
-          />
-        ),
+        element: <DealComparisonPage />,
       },
 
       /* Output Navigation Group */
       {
+        path: '/output/ic-report',
+        element: <ICReportPage />,
+      },
+      {
         path: '/ic-report',
-        element: (
-          <UnderConstructionPage
-            title="IC Report"
-            category="Output"
-            plannedPhase="Phase 9 IC Report Synthesis"
-            description="Investment Committee synthesis memorandum compiling transaction rationale, valuation triangulation, financing breakdown, and risk disclosures."
-          />
-        ),
+        element: <ICReportPage />,
       },
 
       /* System Navigation Group */

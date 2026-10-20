@@ -41,11 +41,11 @@ const DEAL_WORKSPACE_ITEMS: SidebarItemDef[] = [
 ];
 
 const PORTFOLIO_ITEMS: SidebarItemDef[] = [
-  { id: 'deal-comparison', label: 'Deal Comparison', path: '/deal-comparison', icon: Layers },
+  { id: 'deal-comparison', label: 'Deal Comparison', path: '/portfolio/deal-comparison', icon: Layers },
 ];
 
 const OUTPUT_ITEMS: SidebarItemDef[] = [
-  { id: 'ic-report', label: 'IC Report', path: '/ic-report', icon: FileText },
+  { id: 'ic-report', label: 'IC Report', path: '/output/ic-report', icon: FileText },
 ];
 
 const SYSTEM_ITEMS: SidebarItemDef[] = [
@@ -62,6 +62,7 @@ export const Sidebar: React.FC = () => {
 
   return (
     <aside
+      className="no-print"
       style={{
         width: width,
         minWidth: width,

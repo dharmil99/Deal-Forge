@@ -33,18 +33,18 @@ const DEFAULT_DEALS: ActiveDealContext[] = [
 
 const DEFAULT_DEAL_PARAMS: DealParameters = {
   premiumPct: 20,
-  cashPct: 50,
-  debtPct: 30,
-  stockPct: 20,
-  synergiesCr: 1500,
-  feesCr: 0,
+  cashPct: 2,
+  debtPct: 60,
+  stockPct: 38,
+  synergiesCr: 2000,
+  feesCr: 500,
   debtInterestRate: 8.0,
   foregoneCashRate: 5.0,
   taxRate: 25.0,
   refinanceDebt: true,
   sweepCash: true,
-  debtFeePct: 0.0,
-  minCashBuffer: 0.0,
+  debtFeePct: 2.0,
+  minCashBuffer: 1000.0,
 };
 
 const DealContext = createContext<DealContextState | undefined>(undefined);

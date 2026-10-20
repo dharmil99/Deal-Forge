@@ -107,8 +107,14 @@ export const ChartUnavailableState: React.FC<{
   );
 };
 
-export const ChartErrorState: React.FC<{ message?: string }> = ({
+export const ChartErrorState: React.FC<{
+  message?: string;
+  title?: string;
+  onRetry?: () => void;
+}> = ({
   message = 'An error occurred while calculating financial model.',
+  title,
+  onRetry,
 }) => {
   return (
     <div
@@ -125,8 +131,31 @@ export const ChartErrorState: React.FC<{ message?: string }> = ({
         textAlign: 'center',
       }}
     >
-      <AlertTriangle size={16} />
-      <span>{message}</span>
+      <AlertTriangle size={18} />
+      {title && (
+        <span style={{ fontWeight: 600, fontSize: '13px' }}>
+          {title}
+        </span>
+      )}
+      <span style={{ maxWidth: '480px', lineHeight: 1.4 }}>{message}</span>
+      {onRetry && (
+        <button
+          onClick={onRetry}
+          style={{
+            marginTop: '8px',
+            padding: '6px 14px',
+            background: 'var(--bg-surface-2)',
+            border: '1px solid var(--line-strong)',
+            borderRadius: 'var(--radius-xs)',
+            color: 'var(--text-primary)',
+            fontSize: '11px',
+            fontWeight: 600,
+            cursor: 'pointer',
+          }}
+        >
+          Retry Calculation
+        </button>
+      )}
     </div>
   );
 };

@@ -35,7 +35,7 @@ export const MarketTicker: React.FC = () => {
         overflow: 'hidden',
         zIndex: 50,
       }}
-      className="dealforge-ticker"
+      className="dealforge-ticker no-print"
     >
       {/* Institutional Honesty Badge */}
       <div

@@ -28,6 +28,7 @@ export const AppHeader: React.FC = () => {
         boxSizing: 'border-box',
       }}
       aria-label="Application Header"
+      className="app-header no-print"
     >
       {/* Left: Brand Wordmark, Sidebar Toggle, Divider, Breadcrumb Navigation */}
       <div

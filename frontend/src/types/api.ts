@@ -642,53 +642,179 @@ export interface AccretionDilutionResponse {
   is_feasible: boolean;
 }
 
+// ---------------------------------------------------------------------------
+// Phase 9 Scenario & Sensitivity Types
+// ---------------------------------------------------------------------------
+
+export interface ScenarioAssumptions {
+  acquisition_premium?: number;
+  cash_pct?: number;
+  debt_pct?: number;
+  stock_pct?: number;
+  transaction_fees?: number;
+  debt_issuance_fee_pct?: number;
+  minimum_cash_balance?: number;
+  refinance_target_debt?: boolean;
+  use_target_cash?: boolean;
+  debt_interest_rate?: number;
+  foregone_cash_interest_rate?: number;
+  tax_rate?: number;
+  synergy_year_1?: number | null;
+  synergy_year_2?: number | null;
+  synergy_year_3?: number | null;
+  expected_annual_synergies?: number;
+}
+
+export interface ScenarioDefinitionSchema {
+  name: string;
+  scenario_type: 'BASE' | 'UPSIDE' | 'DOWNSIDE' | 'CUSTOM' | string;
+  description?: string;
+  overrides?: ScenarioAssumptions;
+}
+
 export interface SingleScenarioRequest {
   buyer_id: string;
   target_id: string;
-  base_assumptions?: Record<string, unknown>;
-  scenario?: {
-    name: string;
-    scenario_type: string;
-    description?: string;
-    overrides?: Record<string, unknown>;
-  };
+  base_assumptions?: ScenarioAssumptions;
+  scenario?: ScenarioDefinitionSchema;
+}
+
+export interface ScenarioRequest {
+  buyer_id: string;
+  target_id: string;
+  base_assumptions?: ScenarioAssumptions;
+  scenarios: ScenarioDefinitionSchema[];
+}
+
+export interface ScenarioIdentity {
+  name: string;
+  scenario_type: string;
+  description: string;
+}
+
+export interface ScenarioDealResult {
+  purchase_equity_value: number | null;
+  offer_price_per_share?: number | null;
+  transaction_enterprise_value: number | null;
+  cash_amount?: number | null;
+  debt_amount?: number | null;
+  stock_amount?: number | null;
+  cash_pct?: number | null;
+  debt_pct?: number | null;
+  stock_pct?: number | null;
+}
+
+export interface ScenarioSourcesUsesResult {
+  total_uses: number | null;
+  total_sources: number | null;
+  buyer_cash: number | null;
+  new_debt: number | null;
+  stock_issuance: number | null;
+  target_cash?: number | null;
+  balance: number | null;
+  is_feasible: boolean | null;
+  pro_forma_cash?: number | null;
+}
+
+export interface ScenarioYearResult {
+  eps: number | null;
+  accretion_dilution_pct: number | null;
+  status: string | null;
+  break_even_gross_synergy: number | null;
+}
+
+export interface ScenarioADResult {
+  standalone_eps: number | null;
+  year_1: ScenarioYearResult | null;
+  year_2?: ScenarioYearResult | null;
+  year_3?: ScenarioYearResult | null;
+}
+
+export interface ScenarioDiagnostics {
+  warnings: string[];
+  is_feasible: boolean;
+  is_available: boolean;
+  validation_errors?: string[] | null;
 }
 
 export interface ScenarioResult {
-  identity: {
-    name: string;
-    scenario_type: string;
-    description: string;
-  };
+  identity: ScenarioIdentity;
   assumptions: {
     effective: Record<string, unknown>;
     overrides: Record<string, unknown>;
   };
-  deal: {
-    purchase_equity_value: number | null;
-    transaction_enterprise_value: number | null;
-  } | null;
-  sources_uses: {
-    total_uses: number | null;
-    total_sources: number | null;
-    buyer_cash: number | null;
-    new_debt: number | null;
-    stock_issuance: number | null;
-    balance: number | null;
-    is_feasible: boolean | null;
-  } | null;
-  accretion_dilution: {
-    standalone_eps: number | null;
-    year_1: {
-      eps: number | null;
-      accretion_dilution_pct: number | null;
-      status: string | null;
-      break_even_gross_synergy: number | null;
-    } | null;
-  } | null;
-  diagnostics: {
-    warnings: string[];
-    is_feasible: boolean;
-    is_available: boolean;
-  };
+  deal: ScenarioDealResult | null;
+  sources_uses: ScenarioSourcesUsesResult | null;
+  accretion_dilution: ScenarioADResult | null;
+  diagnostics: ScenarioDiagnostics;
 }
+
+export interface ScenarioComparisonResponse {
+  acquirer_id: string;
+  target_id: string;
+  scenario_count: number;
+  scenarios: ScenarioResult[];
+}
+
+// ---------------------------------------------------------------------------
+// Sensitivity Analysis Types
+// ---------------------------------------------------------------------------
+
+export interface SensitivityAxis {
+  variable: string;
+  values: number[];
+}
+
+export interface Sensitivity1DRequest {
+  buyer_id: string;
+  target_id: string;
+  base_assumptions?: ScenarioAssumptions;
+  axis: SensitivityAxis;
+  output_metric: string;
+}
+
+export interface Sensitivity2DRequest {
+  buyer_id: string;
+  target_id: string;
+  base_assumptions?: ScenarioAssumptions;
+  x_axis: SensitivityAxis;
+  y_axis: SensitivityAxis;
+  output_metric: string;
+}
+
+export interface SensitivityCell {
+  value?: number | null;
+  x_value?: number | null;
+  y_value?: number | null;
+  output: number | boolean | null;
+  is_feasible: boolean;
+  diagnostics?: string[];
+}
+
+export interface Sensitivity1DResponse {
+  acquirer_id: string;
+  target_id: string;
+  variable: string;
+  values: number[];
+  output_metric: string;
+  cells: SensitivityCell[];
+}
+
+export interface SensitivityDimensions {
+  rows: number;
+  columns: number;
+  total_cells: number;
+}
+
+export interface Sensitivity2DResponse {
+  acquirer_id: string;
+  target_id: string;
+  x_variable: string;
+  x_values: number[];
+  y_variable: string;
+  y_values: number[];
+  output_metric: string;
+  matrix: SensitivityCell[][];
+  dimensions: SensitivityDimensions;
+}
+
