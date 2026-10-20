@@ -1,0 +1,90 @@
+/* ==========================================================================
+   DealForge Design Tokens (v2 Specification)
+   Institutional Financial Workstation Theme
+   Source: DESIGN_SYSTEM.md.md Section 2
+   ========================================================================== */
+
+:root {
+  /* Surfaces (Dark Theme Only) */
+  --bg-base: #0B0F14;
+  --bg-ticker: #080B10;
+  --bg-surface: #12171E;
+  --bg-surface-2: #1A212B;
+  --bg-elevated: #212A36;
+
+  /* Hairline Borders and Dividers */
+  --line: #243040;
+  --line-rule: #2A3646;
+  --line-strong: #4A586B;
+  --line-hover: #8FA1B8;
+
+  /* Typography / Text Colors */
+  --text-primary: #F2F5F8;
+  --text-strong: #E8ECF1;
+  --text-ticker: #D5DCE6;
+  --text-nav: #C3CCD9;
+  --text-body: #B4BFCE;
+  --text-label: #A9B4C3;
+  --text-muted: #8794A6;
+
+  /* Institutional Accent */
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-line: #3B82F6;
+  --focus: #60A5FA;
+  --accent-wash: #1E293B;
+
+  /* Semantic Data Colors (Meaning only, never decoration) */
+  --positive: #22C55E;
+  --positive-bg: rgba(34, 197, 94, 0.12);
+  --negative: #EF4444;
+  --negative-bg: rgba(239, 68, 68, 0.12);
+  --warning: #F59E0B;
+  --warning-bg: rgba(245, 158, 11, 0.12);
+  --neutral: #64748B;
+  --neutral-bg: rgba(100, 116, 139, 0.12);
+
+  /* Spacing Scale (4 / 8 / 12 / 16 / 24 / 32 / 48 / 56px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 56px;
+
+  /* Radii (Strictly <= 6px, no pills) */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Elevations & Shadows (Flat workstation by default) */
+  --shadow-none: none;
+  --shadow-popover: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-modal: 0 16px 40px rgba(0, 0, 0, 0.65);
+
+  /* Layout Shell Dimensions */
+  --ticker-height: 36px;
+  --header-height: 56px;
+  --sidebar-width: 240px;
+  --sidebar-width-expanded: 240px;
+  --sidebar-width-collapsed: 64px;
+  --sidebar-collapsed-width: 64px;
+
+  /* Typography System */
+  --font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 13px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 40px;
+
+  /* Transition Speeds */
+  --transition-fast: 150ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}

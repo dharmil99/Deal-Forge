@@ -1,0 +1,439 @@
+/* =========================================================================
+   DealForge Public Home Page Styles (Locked Design Reference v2)
+   Matches DealForge home page.html and DESIGN_SYSTEM.md.md Section 10
+   ========================================================================= */
+
+.dealforge-home-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #0B0F14;
+  color: #F2F5F8;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+/* 1. Public Ticker Strip (36px, full width, participating in normal layout at top) */
+.dealforge-public-ticker,
+.dealforge-home-page .ticker {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  min-height: 36px;
+  max-height: 36px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #243040;
+  background: rgba(8, 11, 16, 0.95);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 20;
+}
+
+.dealforge-public-ticker .tlabel,
+.dealforge-home-page .tlabel {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  padding: 0 16px;
+  border-right: 1px solid #243040;
+  color: #C3CCD9;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.dealforge-public-ticker .tlabel i,
+.dealforge-home-page .tlabel i {
+  font-style: normal;
+  color: #8794A6;
+}
+
+.dealforge-public-ticker .twin,
+.dealforge-home-page .twin {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.dealforge-public-ticker .track,
+.dealforge-home-page .track {
+  display: flex;
+  width: max-content;
+  animation: dealforge-tick 50s linear infinite;
+}
+
+.dealforge-public-ticker:hover .track,
+.dealforge-home-page .ticker:hover .track {
+  animation-play-state: paused;
+}
+
+.dealforge-public-ticker .grp,
+.dealforge-home-page .grp {
+  display: flex;
+  gap: 36px;
+  padding-right: 36px;
+  white-space: nowrap;
+}
+
+.dealforge-public-ticker .sym,
+.dealforge-home-page .sym {
+  color: #D5DCE6;
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.dealforge-public-ticker .up,
+.dealforge-home-page .up {
+  color: #22C55E;
+}
+
+.dealforge-public-ticker .dn,
+.dealforge-home-page .dn {
+  color: #EF4444;
+}
+
+/* 2. Main Hero Viewport (min-height: calc(100vh - 36px)) */
+.dealforge-home-page .home-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 36px);
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* 3. Drift Background Layer */
+.dealforge-home-page .bg {
+  position: absolute;
+  top: -4%;
+  right: -4%;
+  bottom: -4%;
+  left: -4%;
+  background-image: url('/assets/images/finance-watermark.jpg');
+  background-size: cover;
+  background-position: 75% center;
+  animation: dealforge-drift 50s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 4. Two-Part Scrim Layer (The only gradients in the product) */
+.dealforge-home-page .scrim {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: 
+    linear-gradient(90deg, rgba(11, 15, 20, 0.94) 0%, rgba(11, 15, 20, 0.78) 34%, rgba(11, 15, 20, 0.30) 68%, rgba(11, 15, 20, 0.42) 100%),
+    linear-gradient(0deg, rgba(11, 15, 20, 0.95) 0%, rgba(11, 15, 20, 0) 38%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 5. Foreground Content Column */
+.dealforge-home-page .home-content,
+.dealforge-home-page .stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: calc(100vh - 36px);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* 6. Public Navigation */
+.dealforge-home-page .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 56px 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.dealforge-home-page .mark {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  color: #F2F5F8;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.dealforge-home-page .navlinks {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.dealforge-home-page .navlinks a.l {
+  color: #C3CCD9;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 12px 0;
+  transition: color 150ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.dealforge-home-page .navlinks a.l:hover {
+  color: #FFFFFF;
+}
+
+/* Buttons */
+.dealforge-home-page .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  padding: 0 24px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 150ms cubic-bezier(0.2, 0.7, 0.2, 1),
+              border-color 150ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.dealforge-home-page .btn.p {
+  background: #2563EB;
+  color: #FFFFFF;
+  border: none;
+}
+
+.dealforge-home-page .btn.p:hover {
+  background: #1D4ED8;
+}
+
+.dealforge-home-page .btn.g {
+  border: 1px solid #4A586B;
+  color: #F2F5F8;
+  background: transparent;
+}
+
+.dealforge-home-page .btn.g:hover {
+  border-color: #8FA1B8;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dealforge-home-page .btn.s {
+  padding: 0 16px;
+  font-size: 14px;
+  min-height: 36px;
+}
+
+.dealforge-home-page a:focus-visible,
+.dealforge-home-page button:focus-visible {
+  outline: 2px solid #60A5FA;
+  outline-offset: 3px;
+}
+
+/* 7. Hero Section */
+.dealforge-home-page .hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: safe center;
+  padding: 48px 56px 40px;
+  max-width: 1280px;
+  box-sizing: border-box;
+}
+
+.dealforge-home-page .h1 {
+  margin: 0 0 28px;
+  font-weight: 600;
+  font-size: clamp(40px, 5.4vw, 80px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: #F2F5F8;
+}
+
+.dealforge-home-page .ln {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+
+.dealforge-home-page .in {
+  display: block;
+  animation: dealforge-rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.dealforge-home-page .sub {
+  margin: 0 0 36px;
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #B4BFCE;
+  animation: dealforge-fadein 0.8s ease 0.7s both;
+}
+
+.dealforge-home-page .cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  animation: dealforge-fadein 0.8s ease 0.85s both;
+}
+
+/* 8. Statistics Strip */
+.dealforge-home-page .stats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 56px;
+  border-top: 1px solid #2A3646;
+  padding-bottom: 32px;
+  animation: dealforge-fadein 0.8s ease 1s both;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.dealforge-home-page .stat {
+  padding: 22px 24px 28px 0;
+  box-sizing: border-box;
+}
+
+.dealforge-home-page .stat + .stat {
+  border-left: 1px solid #2A3646;
+  padding-left: 24px;
+}
+
+.dealforge-home-page .val {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  color: #F2F5F8;
+}
+
+.dealforge-home-page .lbl {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #A9B4C3;
+  line-height: 1.4;
+}
+
+/* 9. Keyframes */
+@keyframes dealforge-drift {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.07) translate(-1.5%, 1%);
+  }
+}
+
+@keyframes dealforge-tick {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes dealforge-rise {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes dealforge-fadein {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 10. Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  .dealforge-home-page .bg,
+  .dealforge-home-page .track,
+  .dealforge-home-page .in,
+  .dealforge-home-page .sub,
+  .dealforge-home-page .cta,
+  .dealforge-home-page .stats {
+    animation: none !important;
+  }
+  .dealforge-home-page .in {
+    transform: none !important;
+  }
+  .dealforge-home-page .sub,
+  .dealforge-home-page .cta,
+  .dealforge-home-page .stats {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* 11. Responsive Breakpoints */
+@media (max-width: 860px) {
+  .dealforge-home-page .nav {
+    padding: 20px 24px 0;
+  }
+  .dealforge-home-page .navlinks a.l {
+    display: none;
+  }
+  .dealforge-home-page .hero {
+    padding: 48px 24px 32px;
+  }
+  .dealforge-home-page .stats {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 24px;
+  }
+  .dealforge-home-page .stat:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .dealforge-home-page .stat:nth-child(n+3) {
+    border-top: 1px solid #2A3646;
+  }
+  .dealforge-home-page .val {
+    font-size: 32px;
+  }
+  .dealforge-home-page .sub {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dealforge-home-page .stats {
+    grid-template-columns: 1fr;
+  }
+  .dealforge-home-page .stat {
+    border-left: 0 !important;
+    padding-left: 0 !important;
+  }
+  .dealforge-home-page .stat + .stat {
+    border-top: 1px solid #2A3646;
+  }
+  .dealforge-home-page .cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .dealforge-home-page .btn {
+    width: 100%;
+  }
+}

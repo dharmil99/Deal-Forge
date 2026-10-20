@@ -1,0 +1,114 @@
+company_id,company_name,ticker,sector,industry,sector_type
+ACC,ACC LTD,ACC,Materials,Cement,Industrial
+Adani Enterp,ADANI ENTERPRISES LTD,ADANIENT,Conglomerate,Diversified/Infrastructure Incubator,Industrial
+Adani Green,ADANI GREEN ENERGY LTD,ADANIGREEN,Utilities,Renewable Power,Industrial
+Ambuja Cements,AMBUJA CEMENTS LTD,AMBUJACEM,Materials,Cement,Industrial
+Apollo Tyres,APOLLO TYRES LTD,APOLLOTYRE,Auto Ancillary,Tyres,Industrial
+ApolloHospitals,APOLLO HOSPITALS ENTERPRISE LTD,APOLLOHOSP,Healthcare,Hospitals,Industrial
+Ashok Leyland,ASHOK LEYLAND LTD,ASHOKLEY,Automobile,Commercial Vehicles,Industrial
+Asian Paints,ASIAN PAINTS LTD,ASIANPAINT,Consumer,Paints,Industrial
+Atul Auto,ATUL AUTO LTD,ATULAUTO,Automobile,Three-Wheelers,Industrial
+Aurobindo Pharma,AUROBINDO PHARMA LTD,AUROPHARMA,Healthcare,Pharmaceuticals,Industrial
+AxisBank,AXIS BANK LTD,AXISBANK,Financial Services,Private Bank,Financial
+B P C L,BHARAT PETROLEUM CORPORATION LTD,BPCL,Energy,Oil Refining & Marketing,Industrial
+BajajAuto,BAJAJ AUTO LTD,BAJAJ-AUTO,Automobile,Two-Wheelers,Industrial
+BajajFinance,BAJAJ FINANCE LTD,BAJFINANCE,Financial Services,NBFC,Financial
+BajajFinserv,BAJAJ FINSERV LTD,BAJAJFINSV,Financial Services,Financial Holding Company,Financial
+Balkrishna Inds,BALKRISHNA INDUSTRIES LTD,BALKRISIND,Auto Ancillary,Tyres (Off-Highway),Industrial
+Bharti Airtel,BHARTI AIRTEL LTD,BHARTIARTL,Telecom,Telecom Services,Industrial
+Birla Corpn,BIRLA CORPORATION LTD,BIRLACORPN,Materials,Cement,Industrial
+Blue Star,BLUE STAR LTD,BLUESTARCO,Consumer Durables,Air Conditioning,Industrial
+Bosch,BOSCH LTD,BOSCHLTD,Auto Ancillary,Auto Components,Industrial
+Britannia,BRITANNIA INDUSTRIES LTD,BRITANNIA,Consumer,FMCG - Food,Industrial
+CEAT,CEAT LTD,CEATLTD,Auto Ancillary,Tyres,Industrial
+Cipla,CIPLA LTD,CIPLA,Healthcare,Pharmaceuticals,Industrial
+Coal India,COAL INDIA LTD,COALINDIA,Materials,Mining (Coal),Industrial
+Coforge,COFORGE LTD,COFORGE,IT,IT Services,Industrial
+Colgate-Palmoliv,COLGATE-PALMOLIVE (INDIA) LTD,COLPAL,Consumer,FMCG - Personal Care,Industrial
+Dabur India,DABUR INDIA LTD,DABUR,Consumer,FMCG,Industrial
+Dalmia BharatLtd,DALMIA BHARAT LTD,DALBHARAT,Materials,Cement,Industrial
+DivisLab,DIVIS LABORATORIES LTD,DIVISLAB,Healthcare,Pharmaceuticals (API),Industrial
+Dixon Technolog,DIXON TECHNOLOGIES (INDIA) LTD,DIXON,Industrials,Electronics Manufacturing (EMS),Industrial
+DrReddys,DR REDDYS LABORATORIES LTD,DRREDDY,Healthcare,Pharmaceuticals,Industrial
+Eicher Motors,EICHER MOTORS LTD,EICHERMOT,Automobile,Two-Wheelers,Industrial
+Endurance Tech,ENDURANCE TECHNOLOGIES LTD,ENDURANCE,Auto Ancillary,Auto Components,Industrial
+Escorts Kubota,ESCORTS KUBOTA LTD,ESCORTS,Industrials,Farm Equipment/Tractors,Industrial
+Eternal,ETERNAL LTD,ETERNAL,Consumer Internet,Food Delivery/Quick Commerce,Industrial
+Force Motors,FORCE MOTORS LTD,FORCEMOT,Automobile,Commercial Vehicles,Industrial
+GAIL (India),GAIL (INDIA) LTD,GAIL,Energy,Gas Utility,Industrial
+Godrej Consumer,GODREJ CONSUMER PRODUCTS LTD,GODREJCP,Consumer,FMCG,Industrial
+Grasim Inds,GRASIM INDUSTRIES LTD,GRASIM,Conglomerate,Cement/Chemicals/Textiles,Industrial
+Havells India,HAVELLS INDIA LTD,HAVELLS,Consumer Durables,Electricals,Industrial
+HCLTech,HCL TECHNOLOGIES LTD,HCLTECH,IT,IT Services,Industrial
+HDFCBank,HDFC BANK LTD,HDFCBANK,Financial Services,Private Bank,Financial
+HDFCLife,HDFC LIFE INSURANCE COMPANY LTD,HDFCLIFE,Financial Services,Life Insurance,Financial
+Hero Motocorp,HERO MOTOCORP LTD,HEROMOTOCO,Automobile,Two-Wheelers,Industrial
+HFCL,HFCL LTD,HFCL,Telecom Equipment,Telecom Equipment/Optical Fiber,Industrial
+Hindalco Inds,HINDALCO INDUSTRIES LTD,HINDALCO,Materials,Metals (Aluminium),Industrial
+Hindustan Copper,HINDUSTAN COPPER LTD,HINDCOPPER,Materials,Metals (Copper Mining),Industrial
+Hindustan Zinc,HINDUSTAN ZINC LTD,HINDZINC,Materials,Metals (Zinc Mining),Industrial
+HUL,HINDUSTAN UNILEVER LTD,HINDUNILVR,Consumer,FMCG,Industrial
+ICICIBank,ICICI BANK LTD,ICICIBANK,Financial Services,Private Bank,Financial
+Indus Towers,INDUS TOWERS LTD,INDUSTOWER,Telecom,Telecom Infrastructure,Industrial
+Infosys,INFOSYS LTD,INFY,IT,IT Services,Industrial
+ITC,ITC LTD,ITC,Conglomerate,FMCG/Cigarettes/Hotels/Paper,Industrial
+J K Cements,J K CEMENTS LTD,JKCEMENT,Materials,Cement,Industrial
+Jindal Steel,JINDAL STEEL LTD,JINDALSTEL,Materials,Metals (Steel),Industrial
+Jio Financial,JIO FINANCIAL SERVICES LTD,JIOFIN,Financial Services,NBFC,Financial
+JK Lakshmi Cem,JK LAKSHMI CEMENT LTD,JKLAKSHMI,Materials,Cement,Industrial
+JSW Energy,JSW ENERGY LTD,JSWENERGY,Utilities,Power Generation,Industrial
+JSW Steel,JSW STEEL LTD,JSWSTEEL,Materials,Metals (Steel),Industrial
+Kalyan Jewellers,KALYAN JEWELLERS INDIA LTD,KALYANKJIL,Consumer Retail,Jewellery,Industrial
+KotakBank,KOTAK MAHINDRA BANK LTD,KOTAKBANK,Financial Services,Private Bank,Financial
+Larsen & Toubro,LARSEN & TOUBRO LTD,LT,Industrials,Engineering & Construction,Industrial
+Lupin,LUPIN LTD,LUPIN,Healthcare,Pharmaceuticals,Industrial
+M T N L,MAHANAGAR TELEPHONE NIGAM LTD,MTNL,Telecom,Telecom Services (PSU),Industrial
+MahindraMahindra,MAHINDRA & MAHINDRA LTD,M&M,Automobile,Diversified Automobile,Industrial
+Marico,MARICO LTD,MARICO,Consumer,FMCG,Industrial
+Maruti,MARUTI SUZUKI INDIA LTD,MARUTI,Automobile,Passenger Vehicles,Industrial
+MaxHealthcare,MAX HEALTHCARE INSTITUTE LTD,MAXHEALTH,Healthcare,Hospitals,Industrial
+Minda Corp,MINDA CORPORATION LTD,MINDACORP,Auto Ancillary,Auto Components,Industrial
+Mindtree,MINDTREE LTD(MERGED),MINDTREE,IT,IT Services (merged into LTIMindtree),Industrial
+Mphasis,MPHASIS LTD,MPHASIS,IT,IT Services,Industrial
+MRF,MRF LTD,MRF,Auto Ancillary,Tyres,Industrial
+Natl. Aluminium,NATIONAL ALUMINIUM COMPANY LTD,NATIONALUM,Materials,Metals - Aluminium (PSU),Industrial
+NestleIndia,NESTLE INDIA LTD,NESTLEIND,Consumer,FMCG - Food,Industrial
+NMDC,NMDC LTD,NMDC,Materials,Mining - Iron Ore (PSU),Industrial
+NTPC,NTPC LTD,NTPC,Utilities,Power Generation (PSU),Industrial
+O N G C,OIL & NATURAL GAS CORPN LTD,ONGC,Energy,Oil & Gas Exploration (PSU),Industrial
+Persistent Systems,PERSISTENT SYSTEMS LTD,PERSISTENT,IT,IT Services,Industrial
+Power Grid Corpn,POWER GRID CORPORATION OF INDIA LTD,POWERGRID,Utilities,Power Transmission (PSU),Industrial
+Railtel Corpn,RAILTEL CORPORATION OF INDIA LTD,RAILTEL,Telecom,Telecom Infrastructure (PSU),Industrial
+Reliance Industries,RELIANCE INDUSTRIES LTD,RELIANCE,Conglomerate,Oil & Gas/Retail/Telecom,Industrial
+Route Mobile,ROUTE MOBILE LTD,ROUTE,IT,Cloud Communication Platform,Industrial
+S A I L,STEEL AUTHORITY OF INDIA LTD,SAIL,Materials,Metals - Steel (PSU),Industrial
+Samvardh. Mothe,SAMVARDHANA MOTHERSON INTERNATIONAL LTD,MOTHERSON,Auto Ancillary,Auto Components,Industrial
+SBI,STATE BANK OF INDIA,SBIN,Financial Services,Public Bank,Financial
+SBILife,SBI LIFE INSURANCE COMPANY LTD,SBILIFE,Financial Services,Life Insurance,Financial
+Shree Cement,SHREE CEMENT LTD,SHREECEM,Materials,Cement,Industrial
+ShriramFinance,SHRIRAM FINANCE LTD,SHRIRAMFIN,Financial Services,NBFC,Financial
+Sona BLW Precis,SONA BLW PRECISION FORGINGS LTD,SONACOMS,Auto Ancillary,Auto Components (EV),Industrial
+Sterlite Tech,STERLITE TECHNOLOGIES LTD,STLTECH,Telecom Equipment,Optical Fiber/Telecom Equipment,Industrial
+SunPharma,SUN PHARMACEUTICAL INDUSTRIES LTD,SUNPHARMA,Healthcare,Pharmaceuticals,Industrial
+Tata Comm,TATA COMMUNICATIONS LTD,TATACOMM,Telecom,Telecom Services,Industrial
+Tata Elxsi,TATA ELXSI LTD,TATAELXSI,IT,Design & Technology Services,Industrial
+Tata Power Co,TATA POWER COMPANY LTD,TATAPOWER,Utilities,Power Generation & Distribution,Industrial
+Tata Steel,TATA STEEL LTD,TATASTEEL,Materials,Metals (Steel),Industrial
+TataConsumer,TATA CONSUMER PRODUCTS LTD,TATACONSUM,Consumer,FMCG,Industrial
+TataMotors,TATA MOTORS LTD,TATAMOTORS,Automobile,Diversified Automobile,Industrial
+TCS,TATA CONSULTANCY SERVICES LTD,TCS,IT,IT Services,Industrial
+TechMahindra,TECH MAHINDRA LTD,TECHM,IT,IT Services,Industrial
+Tejas Networks,TEJAS NETWORKS LTD,TEJASNET,Telecom Equipment,Telecom Equipment,Industrial
+The Ramco Cement,THE RAMCO CEMENTS LTD,RAMCOCEM,Materials,Cement,Industrial
+Titan Company,TITAN COMPANY LTD,TITAN,Consumer Retail,Jewellery/Watches,Industrial
+Torrent Pharma,TORRENT PHARMACEUTICALS LTD,TORNTPHARM,Healthcare,Pharmaceuticals,Industrial
+Trent,TRENT LTD,TRENT,Consumer Retail,Retail (Apparel),Industrial
+TVS Motor Co,TVS MOTOR COMPANY LTD,TVSMOTOR,Automobile,Two-Wheelers,Industrial
+UltraTech Cem,ULTRATECH CEMENT LTD,ULTRACEMCO,Materials,Cement,Industrial
+Varun Beverages,VARUN BEVERAGES LTD,VBL,Consumer,FMCG - Beverages,Industrial
+Vedanta,VEDANTA LTD,VEDL,Materials,Diversified Metals & Mining,Industrial
+Vodafone Idea,VODAFONE IDEA LTD,IDEA,Telecom,Telecom Services,Industrial
+Voltas,VOLTAS LTD,VOLTAS,Consumer Durables,Air Conditioning,Industrial
+Whirlpool India,WHIRLPOOL OF INDIA LTD,WHIRLPOOL,Consumer Durables,Home Appliances,Industrial
+Wipro,WIPRO LTD,WIPRO,IT,IT Services,Industrial
+Zydus Lifesci,ZYDUS LIFESCIENCES LTD,ZYDUSLIFE,Healthcare,Pharmaceuticals,Industrial

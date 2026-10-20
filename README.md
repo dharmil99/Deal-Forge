@@ -7,17 +7,18 @@ companies → precedent transactions → valuation → deal modeling → sources
 uses → accretion/dilution → scenario analysis, built on real Indian company
 financials (₹ Cr).
 
-## Status: V0 — Phase 1 in progress
+## Status: V0 — Phases 1–8 complete
 
 - [x] Phase 0: repo scaffold, schemas, data dictionary
-- [ ] Phase 1: parse full 113-company dataset, sector mapping
-- [ ] Phase 2: target screening
-- [ ] Phase 3: comparable companies
-- [ ] Phase 4: precedent transactions
-- [ ] Phase 5: valuation summary (comps + precedents + DCF)
-- [ ] Phase 6: deal builder
-- [ ] Phase 7: sources & uses
-- [ ] Phase 8: accretion / dilution
+- [x] Phase 1: parse full 113-company dataset, sector mapping
+- [x] Phase 2: target screening
+- [x] Phase 3: comparable companies
+- [x] Phase 4: precedent transactions
+- [x] Phase 4.5: DCF valuation (WACC → FCFF → terminal value → implied equity)
+- [x] Phase 5: valuation summary (comps + precedents + DCF)
+- [x] Phase 6: deal builder
+- [x] Phase 7: sources & uses
+- [x] Phase 8: accretion / dilution
 - [ ] Phase 9: FastAPI + basic frontend integration
 
 ## Architecture (V0)
@@ -29,7 +30,7 @@ analytics/screener_import.py   <- parses raw exports into normalized CSVs
         |
 data/companies.csv, data/financials.csv
         |
-analytics/{screening,comps,precedents,dcf,deal_model,accretion}.py
+analytics/{screening,comps,precedents,dcf,valuation,deal_model,sources_uses,accretion_dilution}.py
         |
 backend/ (FastAPI, thin pass-through layer, no business logic)
         |

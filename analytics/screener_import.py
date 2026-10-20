@@ -242,7 +242,12 @@ def parse_screener_file(filepath: str | Path) -> ParsedCompany:
         )
 
     if {"Borrowings", "Cash & Bank"}.issubset(annual.columns):
-        annual["net_debt_derived"] = annual["Borrowings"].fillna(0) - annual["Cash & Bank"].fillna(0)
+        # net_debt = total_debt - cash.
+        # IMPORTANT: do NOT fillna(0) on Borrowings -- unknown debt must not be treated
+        # as zero debt. When Borrowings is NaN, net_debt_derived is NaN (unknown).
+        # Cash & Bank is filled to 0 (conservative: missing cash treated as no cash).
+        # Valid negative net debt is preserved when known debt < known cash.
+        annual["net_debt_derived"] = annual["Borrowings"] - annual["Cash & Bank"].fillna(0)
     else:
         annual["net_debt_derived"] = None
 
@@ -270,6 +275,8 @@ def parse_folder(raw_dir: str | Path) -> tuple[pd.DataFrame, pd.DataFrame, list[
     all_warnings = []
 
     for xlsx_path in sorted(raw_dir.glob("*.xlsx")):
+        if xlsx_path.name.startswith("~$"):
+            continue
         try:
             parsed = parse_screener_file(xlsx_path)
         except Exception as e:

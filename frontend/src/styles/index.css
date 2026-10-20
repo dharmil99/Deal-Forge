@@ -1,0 +1,191 @@
+@import './tokens.css';
+
+/* ==========================================================================
+   Base & Reset Styles
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+  width: 100%;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#root {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   Typography Utilities
+   ========================================================================== */
+
+/* Institutional Tabular Numeral Enforcement */
+.tabular-nums,
+table,
+.metric-value,
+.stat-value,
+.ticker-value {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* Wordmark: Only tracked capitals in the product */
+.wordmark {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+/* Page Title (App) */
+.page-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+/* Section Title */
+.section-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+/* Label & Muted Helper */
+.form-label,
+.field-label {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--text-label);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-body {
+  color: var(--text-body);
+}
+
+.text-strong {
+  color: var(--text-strong);
+}
+
+/* Semantic Value Colors */
+.text-positive {
+  color: var(--positive);
+}
+
+.text-negative {
+  color: var(--negative);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-neutral {
+  color: var(--neutral);
+}
+
+/* ==========================================================================
+   Focus & Selection
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Workstation Scrollbar Theming
+   ========================================================================== */
+
+/* Modern standard CSS scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) var(--bg-surface);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: var(--radius-xs);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--line-hover);
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive Shell Adaptations
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .search-entry-kbd {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-entry-text {
+    display: none !important;
+  }
+  .copilot-entry-badge {
+    display: none !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .copilot-entry-text {
+    display: none !important;
+  }
+}
+
